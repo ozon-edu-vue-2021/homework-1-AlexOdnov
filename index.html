@@ -37,7 +37,7 @@
           <p>division</p>
           <p>{{counter}} / {{step}}</p>
           <p>
-            <strong>Result: {{div}}</strong>
+            <strong>Result: {{divide}}</strong>
           </p>
         </div>
         <div>
@@ -118,7 +118,7 @@
             <span data-fw="step"></span>
           </p>
           <p>
-            <strong>Result: <span data-fw="div"></span></strong>
+            <strong>Result: <span data-fw="divide"></span></strong>
           </p>
         </div>
         <div>
@@ -190,10 +190,8 @@
           mul() {
             return this.counter * this.step;
           },
-          div() {
-            const res = this.counter / this.step;
-            const resRound = Number(res.toFixed(3));
-            return res === resRound ? res : resRound;
+          divide() {
+            return Number((this.counter / this.step).toFixed(3));
           },
           countPow() {
             return this.counter * this.counter;
@@ -223,10 +221,8 @@
         mul() {
           return data.counter * data.step;
         },
-        div() {
-          const res = data.counter / data.step;
-          const resRound = Number(res.toFixed(3));
-          return res === resRound ? res : resRound;
+        divide() {
+          return Number((data.counter / data.step).toFixed(3));
         },
         countPow() {
           return data.counter * data.counter;
